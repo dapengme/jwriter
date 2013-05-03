@@ -168,14 +168,16 @@
 				</div>
 			</div>
 			<div class="span7 main">
-				<form class="note-form  markdown" id="note-form" data-note-id="15808" onsubmit="return false;">
-					<div class="saving-notice hide"></div>
-					<input class="title mousetrap" id="note_title" name="note_name" type="text" value="无标题笔记">
-					<textarea class="text mousetrap" id="note_content" name="note_content" style="height: 81%;">oooo</textarea>
-				</form>
+				<div class="saving-notice hide"></div>
+				<input class="title mousetrap" id="note_title" name="note_name" type="text" value="无标题笔记">
+				<div id="epiceditor" class="text mousetrap" style="height: 79%;"></div>
 			</div>
 		</div>
 	</div>
 	<!-- /container -->
+	  <script src="<c:url value='/js/jquery.min.js'/>"></script>
+	  <script src="<c:url value='/js/prettify/prettify.js'/>"></script>
+	  <script src="<c:url value='/js/epiceditor/js/epiceditor.js'/>"></script>
+	  <script src="<c:url value='/js/main.js'/>"></script>
 </body>
 </html>	
