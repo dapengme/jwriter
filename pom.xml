@@ -4,10 +4,10 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.sjl</groupId>
-	<artifactId>webapp</artifactId>
+	<groupId>com.beardnote</groupId>
+	<artifactId>jwriter</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>WebApp</name>
+	<name>jwriter</name>
 	<description></description>
 
 	<repositories>
