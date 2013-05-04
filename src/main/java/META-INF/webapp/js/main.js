@@ -1,7 +1,7 @@
 var opts = {
   container: 'epiceditor',
   basePath: '/js/epiceditor',
-  clientSideStorage: true,
+  clientSideStorage: false,
   localStorageName: 'epiceditor',
   useNativeFullsreen: true,
   parser: marked,
@@ -24,3 +24,34 @@ var opts = {
 }
 var editor = new EpicEditor(opts);
 editor.load();
+
+
+$.ajax({
+	  url: '/note/detail',
+	  type: 'GET',
+	  dataType: 'json',
+	  success: function(detail) {
+		  $("#id").val(detail.id);
+		  $("#title").val(detail.title);
+		  editor.importFile(detail.title, detail.content);
+	  }
+});
+
+setInterval("saveNote()",5000);
+
+function saveNote(){
+	var id=$("#id").val();
+	var title = $("#title").val();
+	var content = editor.exportFile();
+	$.ajax({
+		  url: '/note/update',
+		  type: 'POST',
+		  dataType: 'json',
+		  data: {id: id,content:content,title:title},
+		  success: function(result) {
+			  console.log("save ok");
+		  }
+	});
+}
+
+

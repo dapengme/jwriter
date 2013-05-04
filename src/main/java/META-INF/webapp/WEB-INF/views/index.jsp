@@ -168,8 +168,9 @@
 				</div>
 			</div>
 			<div class="span7 main">
+				<input id="id" name="id" type="hidden" />
 				<div class="saving-notice hide"></div>
-				<input class="title mousetrap" id="note_title" name="note_name" type="text" value="无标题笔记">
+				<input class="title mousetrap" id="title" name="title" type="text" >
 				<div id="epiceditor" class="text mousetrap" style="height: 79%;"></div>
 			</div>
 		</div>
