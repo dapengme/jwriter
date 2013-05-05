@@ -157,7 +157,7 @@
 							<p class="wordage win-text">字数: 1</p>
 							<a href="javascript:void(0)" data-type="edit" class="note-link title">无标题笔记</a>
 							<a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">
-								<i class="icon-share"></i>
+								<i class="icon-share">share</i>
 							</a>
 						</li>
 

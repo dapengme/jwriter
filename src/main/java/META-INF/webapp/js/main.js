@@ -1,7 +1,7 @@
 var opts = {
   container: 'epiceditor',
   basePath: '/js/epiceditor',
-  clientSideStorage: false,
+  clientSideStorage: true,
   localStorageName: 'epiceditor',
   useNativeFullsreen: true,
   parser: marked,
@@ -37,7 +37,7 @@ $.ajax({
 	  }
 });
 
-setInterval("saveNote()",5000);
+setInterval("saveNote()",10000);
 
 function saveNote(){
 	var id=$("#id").val();
