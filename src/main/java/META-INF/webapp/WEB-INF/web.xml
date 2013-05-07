@@ -105,7 +105,11 @@
     <!-- Spring配置文件结束 -->
 
 	
-	
+	<listener>
+        <listener-class>
+            org.springframework.web.context.request.RequestContextListener
+        </listener-class>
+    </listener>
 	
     <servlet>
         <servlet-name>spring</servlet-name>
