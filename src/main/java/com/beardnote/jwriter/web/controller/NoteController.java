@@ -19,7 +19,7 @@ public class NoteController {
     @RequestMapping(value = "/detail")
     public @ResponseBody
     String detail() {
-        Note note = noteService.get();
+        Note note = noteService.getLastNote();
         String json = JSON.toJSONString(note);
         return json;
     }
@@ -27,7 +27,6 @@ public class NoteController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public @ResponseBody
     String updateForm(Note note) {
-        noteService.update(note);
         return "{'result':'ok'}";
     }
 }
