@@ -41,19 +41,14 @@
 
 	<!-- Scans the classpath of the application for @Components to deploy as 
 		beans -->
-	<context:component-scan base-package="com.beardnote.jwriter.web.controller" />
+	<context:component-scan base-package="com.beardnote.jwriter.web.admin" />
 
 	<!-- Configures the @Controller programming model -->
 	<mvc:annotation-driven />
-	
 
-
-	<!-- Forwards requests to the "/" resource to the "home" view -->
-	<mvc:view-controller path="/" view-name="index" />
-
-	<mvc:resources mapping="/images/**" location="/images/" />
-	<mvc:resources mapping="/css/**" location="/css/" />
-	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/admin/images/**" location="/admin/images/" />
+	<mvc:resources mapping="/admin/css/**" location="/admin/css/" />
+	<mvc:resources mapping="/admin/js/**" location="/admin/js/" />
 
 	<!-- i18n message source -->
 	<bean id="messageSource"
@@ -68,7 +63,7 @@
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="prefix" value="/WEB-INF/views/admin/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 

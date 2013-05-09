@@ -1,4 +1,4 @@
-package com.beardnote.core.dao;
+package com.beardnote.common.spring;
 import java.sql.Connection;
 
 import javax.sql.DataSource;

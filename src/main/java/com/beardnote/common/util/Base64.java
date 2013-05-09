@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.beardnote.core.util;
+package com.beardnote.common.util;
 
 /**
  * Encodes and decodes to and from Base64 notation.

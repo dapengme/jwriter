@@ -1,4 +1,4 @@
-package com.beardnote.core.annotation;
+package com.beardnote.common.annotation;
 
 /*
  * Copyright 2007-2009 the original author or authors.

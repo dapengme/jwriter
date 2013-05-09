@@ -1,4 +1,4 @@
-package com.beardnote.jwriter.web.controller;
+package com.beardnote.jwriter.web.front;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,20 +13,21 @@ import com.beardnote.jwriter.service.NoteService;
 @Controller
 @RequestMapping("/note")
 public class NoteController {
-    @Autowired
-    private NoteService noteService;
+	@Autowired
+	private NoteService noteService;
 
-    @RequestMapping(value = "/detail")
-    public @ResponseBody
-    String detail() {
-        Note note = noteService.getLastNote();
-        String json = JSON.toJSONString(note);
-        return json;
-    }
+	@RequestMapping(value = "/detail")
+	public @ResponseBody
+	String detail() {
+		Note note = noteService.getLastNote();
+		String json = JSON.toJSONString(note);
+		return json;
+	}
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public @ResponseBody
-    String updateForm(Note note) {
-        return "{'result':'ok'}";
-    }
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	@ResponseBody
+	public String updateForm(Note note) {
+		noteService.update(note);
+		return "{'result':'ok'}";
+	}
 }

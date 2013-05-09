@@ -1,4 +1,4 @@
-package com.beardnote.core.filter;
+package com.beardnote.common.filter;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class SecurityFilter implements Filter {
 		ignores = cfg.getInitParameter("ignoreExts");
 		if (ignores != null)
 			for (String ig : StringUtils.split(ignores, ','))
-				ignoreExts.add('.' + ig.trim());
+				ignoreExts.add(ig.trim());
 	}
 
 	@Override
@@ -68,9 +68,7 @@ public class SecurityFilter implements Filter {
 			}
 		} catch (SecurityException e) {
 			response.sendRedirect(request.getContextPath() + "/login");
-		} finally {
-			// if(rc!=null) rc.end();
-		}
+		} 
 	}
 
 	@Override

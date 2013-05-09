@@ -1,4 +1,4 @@
-package com.beardnote.core.common;
+package com.beardnote.common.page;
 
 import java.util.List;
 

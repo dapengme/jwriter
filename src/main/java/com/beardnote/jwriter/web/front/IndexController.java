@@ -1,4 +1,4 @@
-package com.beardnote.jwriter.web.controller;
+package com.beardnote.jwriter.web.front;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

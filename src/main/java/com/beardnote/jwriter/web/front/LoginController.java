@@ -1,4 +1,4 @@
-package com.beardnote.jwriter.web.controller;
+package com.beardnote.jwriter.web.front;
 
 import javax.servlet.http.HttpServletRequest;
 
