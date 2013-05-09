@@ -51,9 +51,8 @@
 	<!-- Forwards requests to the "/" resource to the "home" view -->
 	<mvc:view-controller path="/" view-name="index" />
 
-	<mvc:resources mapping="/images/**" location="/images/" />
-	<mvc:resources mapping="/css/**" location="/css/" />
-	<mvc:resources mapping="/js/**" location="/js/" />
+	<!-- 处理静态资源 -->
+	<mvc:default-servlet-handler />
 
 	<!-- i18n message source -->
 	<bean id="messageSource"

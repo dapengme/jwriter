@@ -33,22 +33,36 @@
 	   <url-pattern>/*</url-pattern>
 	</filter-mapping>    
     
-	<filter>
-		<filter-name>SecurityFilter</filter-name>
-		<filter-class>com.beardnote.common.filter.SecurityFilter</filter-class>
+   <!--  前台用户登录UserSessionFilter -->
+	 <filter>
+		<filter-name>UserSessionFilter</filter-name>
+		<filter-class>com.beardnote.common.filter.UserSessionFilter</filter-class>
         <init-param>
             <param-name>ignore</param-name>
-            <param-value>/css/,/images/,/js/,/login</param-value>
+            <param-value>/css/,/images/,/js/,/admin/css/,/admin/images/,/admin/js/,/login,/logout</param-value>
         </init-param>
         <init-param>
             <param-name>ignoreExts</param-name>
-            <param-value>.css,.js,.jpg,.jpeg,.png,.zip,.ico</param-value>
+            <param-value>.css,.js,.jpg,.jpeg,.png,.zip,.ico,.do</param-value>
         </init-param>
 	</filter>
 	<filter-mapping>
-		<filter-name>SecurityFilter</filter-name>
+		<filter-name>UserSessionFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>    
+	</filter-mapping> 
+	 
+ 	<filter>
+		<filter-name>AdminUserSessionFilter</filter-name>
+		<filter-class>com.beardnote.common.filter.AdminUserSessionFilter</filter-class>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>/admin/login.do,/admin/logout.do</param-value>
+        </init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>AdminUserSessionFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>   
 
     <!-- 设置servlet编码开始 -->
     <filter>

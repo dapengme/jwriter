@@ -24,7 +24,6 @@ public class DisableUrlSessionFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
             ServletException {
         // skip non-http requests
-    	System.out.println(((HttpServletRequest) request).getRequestURI());
         if (!(request instanceof HttpServletRequest)) {
             chain.doFilter(request, response);
             return;

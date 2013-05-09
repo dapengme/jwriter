@@ -1,0 +1,288 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>	
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sobey--云平台服务-注册</title>
+<!-- Le styles -->
+<link href="<c:url value='/admin/css/cmop.css'/>" rel="stylesheet">
+<link href="<c:url value='/admin/css/bootstrap.css'/>" rel="stylesheet">
+<link href="<c:url value='/admin/css/bootstrap-responsive.css'/>" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+     <script src="<c:url value='/admin/js/html5.js'/>"></script>
+    <![endif]-->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="<c:url value='/admin/js/jquery.min.js'/>"></script>
+<script src="<c:url value='/admin/js/bootstrap.min.js'/>"></script>
+
+<script>
+
+	$(document).ready(function() {
+		//聚焦指定的Tab
+		$("#support-tab").addClass("active");
+		
+		
+	});
+</script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<!-- Header -->
+		<div class="page-header">
+			<h1>
+				Sobey<small>--云平台服务</small>
+			</h1>
+		</div>
+
+		<!-- Menu -->
+		<div id="menu">
+			<ul class="nav nav-tabs">
+				<li id="home-tab"><a href="./Home.html">主页</a></li>
+				<li id="support-tab"><a href="./SupportList.html">服务申请</a></li>
+				<li id="feature-tab"><a href="./FeatureList.html">服务变更</a></li>
+				<li id="bug-tab"><a href="./BugList.html">故障申报</a></li>
+				<li id="audit-tab"><a href="./AuditList.html">审核</a></li>
+				<li><a href="./Login.html">退出登录</a></li>
+			</ul>
+		</div>
+
+
+		<div class="row">
+		
+			<div id="leftbar" class="span2">
+				<ul class="nav nav-list">
+					<li class="nav-header">我的申请</li>
+					<li id="all-bar"><a href="./ECSList.html"><i id="all-icon" class="icon-hdd"></i>All</a></li>
+					<li class="divider"></li>
+					<li class="nav-header">基础架构服务</li>
+					<li id="pcs-bar"><a href="./PCSList.html"><i id="pcs-icon" class="icon-retweet"></i>PCS</a></li>
+					<li id="ecs-bar"><a href="./ECSList.html"><i id="ecs-icon" class="icon-retweet"></i>ECS</a></li>
+					<li id="es3-bar"><a href="./ES3List.html"><i id="es3-icon" class="icon-inbox"></i>ES3</a></li>
+					<li id="eip-bar"><a href="./EIPList.html"><i id="eip-icon" class="icon-file"></i>EIP</a></li>
+					<li id="elb-bar"><a href="./ELBList.html"><i id="elb-icon" class="icon-cog"></i>ELB</a></li>
+					<li id="esg-bar"><a href="#"><i id="esg-icon" class="icon-cog"></i>ESG</a></li>
+					<li class="divider"></li>
+					<li class="nav-header">平台服务</li>
+					<li id="mdn-bar"><a href="./MDNList.html"><i id="mdn-icon" class="icon-user"></i>MDN</a></li>
+					<li id="media-bar"><a href="./MediaList.html"><i id="media-icon" class="icon-user"></i>媒体处理</a></li>
+					<li id="content-bar"><a href="./contentList.html"><i id="content-icon" class="icon-user"></i>内容仓库</a></li>
+					<li class="divider"></li>
+					<li class="nav-header">软件服务</li>
+					<li id="bsp-bar"><a href="./BSPList.html"><i id="mdn-con" class="icon-user"></i>BSP</a></li>
+					<li><a href="#"><i class="icon-user"></i>数据加工</a></li>
+					<li><a href="#"><i class="icon-user"></i>拆条</a></li>
+					<li><a href="#"><i class="icon-user"></i>编目</a></li>
+				</ul>
+			</div>
+
+			<div id="main" class="span10">
+
+				<div id="myResources">
+					<h3>我的资源</h3>
+					<div class="row page-header">
+						<div class="span2">
+							<a href="#">ECS 2 </a>
+						</div>
+						<div class="span2">
+							<a href="#">ES3 5</a>
+						</div>
+						<div class="span2">
+							<a href="#">ELB 1 </a>
+						</div>
+						<div class="span2">
+							<a href="#">EIP 15</a>
+						</div>
+						<div class="span2">
+							<a href="#">EFW 3</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Search -->
+				<form class="well well-small form-search " action="./SupportList.html">
+
+					<div class="row-fluid show-grid">
+
+						<div class="span4">
+							<label class="control-label ">主题:</label> 
+							<input type="text" id="title" name="title"	placeholder="服务申请主题" class="input-medium">
+						</div>
+
+						<div class="span4">
+							<label class="control-label">审核状态:</label> 
+							<select
+								class="input-mini">
+								<option></option>
+								<option value="1">待审核</option>
+								<option value="2">审核中</option>
+								<option value="3">已审核</option>
+								<option value="4">已退回</option>
+							</select>
+						</div>
+						<div class="span2">
+							<button class="btn" type="submit">Search</button>
+						</div>
+					</div>
+				</form>
+
+
+				<!-- Table -->
+				<table class="table table-striped table-bordered table-condensed">
+					<colgroup>
+						<col class="span3">
+						<col class="span2">
+						<col class="span2">
+						<col class="span1">
+						<col class="span2">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>主题</th>
+							<th>申请类型</th>
+							<th>创建时间</th>
+							<th>审核状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>liukai</td>
+							<td>ESC</td>
+							<td>2012-12-08</td>
+							<td><span class="label label-important">待审核</span></td>
+							<td>
+								<a  href="./SupportECSDetail.html">查看</a> 
+								<a href="#auditDetail"  data-toggle="modal">审核进度</a>
+								<a  href="./SupportForm.html">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>liukai</td>
+							<td>PM</td>
+							<td>2012-12-08</td>
+							<td><span class="label label-warning">审核中</span></td>
+							<td>
+								<a  href="./SupportDetail.html">查看</a>
+								<a  href="./SupportForm.html">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>liukai</td>
+							<td>ES3</td>
+							<td>2012-12-08</td>
+							<td><span class="label label-success">已审核</span></td>
+							<td>
+								<a  href="./SupportDetail.html">查看</a> 
+								<a  href="./SupportDetail.html">修改</a> 
+								<a  href="./FeatureForm.html">变更</a>
+							</td>
+						</tr>
+						<tr>
+							<td>liukai</td>
+							<td>ESC</td>
+							<td>2012-12-08</td>
+							<td><span class="label label-important">待审核</span></td>
+							<td>
+								<a  href="./SupportDetail.html">查看</a> 
+								<a  href="./SupportForm.html">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<td>liukai</td>
+							<td>ESC</td>
+							<td>2012-12-08</td>
+							<td><span class="label label-important">待审核</span></td>
+							<td>
+								<a  href="./SupportDetail.html">查看</a> 
+								<a  href="./SupportForm.html">修改</a>
+							</td>
+						</tr>
+						 
+
+					</tbody>
+				</table>
+				
+				<div id="auditDetail" class="modal hide fade form-horizontal">
+						
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h3>审核进度</h3>
+							</div>
+							
+							<div class="modal-body">
+							
+								<div class="step">
+									<img alt="" src="./img/stepCurrent.png">
+									<img alt=""	src="./img/step.png">
+									<img alt="" src="./img/stepEnd.png">
+								</div>
+				
+								<div class="step hidden">
+									<img alt="" src="./img/stepOver.png">
+									<img alt=""	src="./img/stepCurrent.png">
+									<img alt=""	src="./img/stepEnd.png">
+								</div>
+				
+								<div class="step hidden">
+									<img alt="" src="./img/stepOver.png">
+									<img alt=""	src="./img/stepOver.png">
+									<img alt=""	src="./img/stepLast.png">
+								</div>
+											
+									
+								<dl class="dl-horizontal">
+									<c:forEach var="audits" items="${item.audits }">
+										<dt>审核人:</dt>
+										<dd>${audits.apply.user.name }</dd>
+										<dt>审核时间:</dt>
+										<dd>
+											2012-07-30 10:16:06 
+										</dd>
+										<dt>审核结果:</dt>
+										<dd>
+											同意 
+										</dd>
+										<dt>审核意见:</dt>
+										<dd>${audits.opinion}</dd>
+										
+										<hr>
+										
+									</c:forEach>
+								</dl>
+							</div>
+							
+							<div class="modal-footer"><a href="#" class="btn" data-dismiss="modal">关闭</a></div>
+							
+						</div>
+				
+				<!-- Pagination -->
+				<div class="pagination pull-right">
+					<ul>
+						<li class="disabled"><a href="#">«</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">»</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+			<!-- Footer -->
+			<div id="footer" class="span12">Copyright &copy; 2005-2012 Sobey</div>
+
+
+	</div>
+</body>
+</html>

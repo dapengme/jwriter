@@ -16,7 +16,9 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class SecurityFilter implements Filter {
+import com.beardnote.common.constants.Constants;
+
+public class UserSessionFilter implements Filter {
 	private List<String> ignoreURIs = new ArrayList<String>();
 	private List<String> ignoreExts = new ArrayList<String>();
 
@@ -59,16 +61,18 @@ public class SecurityFilter implements Filter {
 			}
 
 			HttpSession session = request.getSession();
-			Object userinfo = session.getAttribute("userinfo");
+			Object userinfo = session.getAttribute(Constants.Front.USER_KEY);
 			if (null == userinfo) {
-				response.sendRedirect(request.getContextPath() + "/login");
+				response.sendRedirect(request.getContextPath()
+						+ Constants.Front.USER_LOGIN);
 			} else {
 				chain.doFilter(request, response);
 				return;
 			}
 		} catch (SecurityException e) {
-			response.sendRedirect(request.getContextPath() + "/login");
-		} 
+			response.sendRedirect(request.getContextPath()
+					+ Constants.Front.USER_LOGIN);
+		}
 	}
 
 	@Override
