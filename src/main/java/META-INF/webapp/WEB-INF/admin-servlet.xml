@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
-<!-- 解决@ResponseBody中文乱码 -->
+	<!-- 解决@ResponseBody中文乱码 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
 		<property name="messageConverters">
@@ -56,13 +56,23 @@
 		<property name="cacheSeconds" value="30" />
 	</bean>
 
-	<!-- Resolve jsp's -->
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/views/admin/" />
-		<property name="suffix" value=".jsp" />
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"> 
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" 
+		/> <property name="prefix" value="/WEB-INF/views/admin/" /> <property name="suffix" 
+		value=".jsp" /> </bean> -->
+
+
+	<bean id="beetlConfig" class="org.bee.tl.ext.spring.BeetlGroupUtilConfiguration"
+		init-method="init">
+		<property name="root" value="/WEB-INF/views/admin/" />
+		<property name="optimize" value="true" />
+		<property name="nativeCall" value="true" />
+		<property name="check" value="2" />
+		<property name="suffix" value=".html" />
+		<property name="charset" value="utf-8" />
+	</bean>
+	<bean id="viewResolver" class="org.bee.tl.ext.spring.BeetlSpringViewResolver">
+		<property name="contentType" value="text/html;charset=UTF-8" />
 	</bean>
 
 	<!-- 控制器异常处理 -->
