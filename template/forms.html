@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+	
+	<!-- favicon -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	
+	<!-- page title -->
+	<title>Carlo El Piccolo :: Administration</title>
+	
+	<!-- css -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" >
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" >
+	<link href="css/vendor/circle.hover.css" rel="stylesheet" type="text/css" >
+	<link href="css/vendor/fullcalendar.css" rel="stylesheet" type="text/css" >
+	<link href="css/vendor/sourcerer.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendor/prettify.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendor/jquery.tagsinput.css" rel="stylesheet" >
+    <link href="css/vendor/jquery.mcustomscrollbar.css" rel="stylesheet" type="text/css" >
+	<link href="css/main.css" rel="stylesheet" type="text/css" >
+	<link href="css/media.css" rel="stylesheet" type="text/css" >
+	
+	<!-- layout appearance -->
+    <script src="js/vendor/jquery-1.9.0.min.js"></script>
+	<script src="js/appearance.js"></script>
+
+</head>
+<body>
+		<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<!-- top navigation bar -->
+		<div class="navbar navbar-fixed-top">
+		  
+			<a href="dashboard.html">
+				<div id="logo"></div>
+			</a>
+
+			<div class="search">
+				<input type="text" placeholder="This is an ajax search input..." maxlength="50">
+			</div>
+			
+			<!-- header navigation -->
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Admin settings</a></li>
+					<li><a href="#">User profile</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">More options</a></li>
+					<li><a href="#">Go to page</a></li>
+				</ul>
+			</nav>
+			
+			<!-- right part header icons -->
+			<ul class="user-nav">
+				<li><a href="#" data-placement="bottom" class="icon-status tip" title="Check stats"></a></li>
+				<li><a href="#" data-placement="bottom" class="icon-user tip" title="User area"></a></li>
+				<li><a href="#" data-placement="bottom" class="icon-dialog tip" title="Some information"></a></li>
+				<li><a href="index.html" data-placement="bottom" class="icon-logout tip" title="Logout"></a></li>
+			</ul>
+			
+			<!-- user sidebar -->
+			<div id="user-settings" class="right-bar">
+				<div class="side-wrap top-10 main">
+					<ul class="top-5">
+						<li>Username: Carlo</li>
+						<li>Last login: 09.05.2013</li>
+						<li>User permissions: Admin</li>
+					</ul>
+					
+					<span class="dotted"></span>
+					
+					<ul>
+						<li>Name: Carlo</li>
+						<li>Last name: El Piccolo</li>
+						<li>Registered: 23.09.2012</li>
+						<li>Email: carlo@elpiccolo.com</li>
+					</ul>
+					
+					<span class="dotted"></span>
+					
+					<p class="top-5">Mauris nec velit orci, eget sollicitudin magna. Cras urna nibh, ullamcorper sit amet iaculis sit amet, pulvinar ut sem. Donec a adipiscing dolor. Phasellus commodo sollicitudin enim ullamcorper ornare. Cras molestie volutpat consequat. Suspendisse potenti. Quisque viverra iaculis mi, sed mollis quam porta eu. Pellentesque tincidunt nibh et turpis ornare accumsan. Pellentesque aliquam congue justo vel imperdiet.</p>
+					
+					<a class="btn btn-success">Go to profile</a>
+					
+				</div>
+			</div>
+			
+			<!-- search sidebar -->
+			<div class="search-box right-bar"></div>
+			
+			<!-- additional sidebar -->
+			<div id="additional" class="right-bar">
+				<div class="side-wrap top-10">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum commodo nisi vitae commodo. Ut nulla ligula, facilisis sit amet imperdiet id, porttitor nec diam. Sed et lacus a ipsum semper hendrerit. Integer fermentum lobortis ullamcorper. Ut feugiat ante in mi volutpat sollicitudin vel quis nisi. Aliquam erat volutpat. Aenean id justo libero. Curabitur vel felis quis ipsum sollicitudin laoreet.</p>
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<span>Visits</span>
+								<em>193</em>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<span>Users</span>
+								<em>163</em>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<span>Orders</span>
+								<em>55</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="side-wrap top-10">
+					<div class="progress-bar green stripes tip" title="Progress: 30%">
+						<span style="width: 30%"></span>
+					</div>
+					<div class="progress-bar red stripes tip" title="Progress: 50%">
+						<span style="width: 50%"></span>
+					</div>
+					<div class="progress-bar blue stripes tip" title="Progress: 70%">
+						<span style="width: 70%"></span>
+					</div>
+				</div>
+				
+				<span class="dotted"></span>
+			</div>
+			
+			<!-- appearance sidebar -->
+			<div id="pickup" class="right-bar">
+				<div class="side-wrap top-10">
+					<p class="top-10">Admin main color:</p>
+					<ul class="skin">
+						<li><a class="default active tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="default" href="javascript:;"></a></li>
+						<li><a class="black tip" title="Black" data-toggle="tooltip" data-placement="bottom" data-pick="black" href="javascript:;"></a></li>
+						<li><a class="azul tip" title="Blue" data-toggle="tooltip" data-placement="bottom" data-pick="azul" href="javascript:;"></a></li>
+						<li><a class="blanco tip" title="White" data-toggle="tooltip" data-placement="bottom" data-pick="blanco" href="javascript:;"></a></li>
+						<li><a class="reddish tip" title="Reddish" data-toggle="tooltip" data-placement="bottom" data-pick="reddish" href="javascript:;"></a></li>
+					</ul>
+				</div>
+				
+				<span class="dotted"></span>
+				
+				<div class="side-wrap top-10">
+					<p class="top-10">Admin background patterns:</p>
+					<ul class="pattern">
+						<li><a class="default active tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="1" href="javascript:;">1</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="2" href="javascript:;">2</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="3" href="javascript:;">3</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="4" href="javascript:;">4</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="5" href="javascript:;">5</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="6" href="javascript:;">6</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="7" href="javascript:;">7</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="8" href="javascript:;">8</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="9" href="javascript:;">9</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="10" href="javascript:;">10</a></li>
+					</ul>
+				</div>
+			</div>
+		 
+		</div>
+		
+		
+		<!-- sidebar -->
+		<div class="sidebar-nav">
+			
+			<span class="accent-1"></span>
+			
+			<div id="user-box">
+				<span id="dynamic">5,10,15,20,18,16,14,20,15,16,12,10</span>
+				<em>$58,650</em>
+			</div>
+			
+			<a class="prof-pic right-open" href="javascript:;" data-href="#user-settings">
+				<img src="img/__tmp/sidebar.png" alt="">
+			</a>
+			
+			<!-- sidebar navigation -->
+			<ul id="navigation">
+				<li><a href="dashboard.html"><i class="nav-dashboard"></i>Dashboard</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-products"></i>Products<span>3</span></a>
+					<ul>
+						<li><a href="products_grid.html" class="tip" title="Place some additional information in here" data-placement="right">Grid view</a></li>
+						<li><a href="products_table.html">Table view</a></li>
+						<li><a href="gallery.html">Item gallery</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" class="active"><i class="nav-forms"></i>Forms stuff<span>4</span></a>
+					<ul class="open">
+						<li><a href="forms.html" class="current">Forms</a></li>
+						<li><a href="forms_validation.html">Form validation</a></li>
+						<li><a href="editor.html">Text editor</a></li>
+						<li><a href="file_upload.html">File management</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-tables"></i>Tables<span>2</span></a>
+					<ul>
+						<li><a href="tables.html">Static tables</a></li>
+						<li><a href="tables_dynamic.html">Dynamic tables</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-ui"></i>Ui elements<span>5</span></a>
+					<ul>
+						<li><a href="general_elements.html">General elements</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="buttons.html">Button sets</a></li>
+						<li><a href="invoice.html">Invoice template</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+					</ul>
+				</li>
+				<li><a href="locations.html"><i class="nav-map"></i>Google map locations</a></li>
+				<li><a href="typography.html"><i class="nav-typography"></i>Typography</a></li>
+				<li><a href="charts.html"><i class="nav-chart"></i>Charts and Graphs</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#additional"><i class="nav-additional"></i>Open additional sidebar</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#pickup"><i class="nav-color"></i>Appearance</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-pages"></i>Other pages<span>5</span></a>
+					<ul>
+						<li><a href="search.html">Search page</a></li>
+						<li><a href="404.html">404 page</a></li>
+						<li><a href="messaging.html">Messages</a></li>
+						<li><a href="grid.html">Grid layout</a></li>
+						<li><a href="blanc_page.html">Blanc page</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+
+		<div class="container">
+			
+			<div id="title">
+				General form elements
+			</div>
+			
+			<div id="breadcrumb">
+				<ul>
+					<li><a class="home" href="#">&nbsp;</a></li>
+					<li><a href="#">Form Stuff</a></li>
+					<li>General form elements</li>
+				</ul>
+			</div>
+			
+			<div id="content">
+			
+				<ul class="ch-grid">
+					
+					<li>
+						<div class="ch-item">				
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-1"></div>
+									<div class="ch-info-back">
+										<h3>Item content 1</h3>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-2"></div>
+									<div class="ch-info-back">
+										<h3>Item content 2</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-3"></div>
+									<div class="ch-info-back">
+										<h3>Item content 3</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li class="tip" title="Place some additional information in here">
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-4"></div>
+									<div class="ch-info-back">
+										<h3>Item content 4</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-5"></div>
+									<div class="ch-info-back">
+										<h3>Item content 5</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+				
+				<div class="wrapper">
+					
+					<form class="main">
+						<fieldset>
+							
+							<div class="whead">
+								<strong>Form elements</strong>
+							</div>
+							
+							<div class="box holder">
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Simple input field:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Highlight on focus:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value="" class="shiny blue-high">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Input with placeholder:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="" placeholder="Your email address...">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Read only input value:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="Content here..." readonly>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Disabled input:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="" disabled>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>
+											Some note:
+											<span class="small">This is some notification:</span>
+										</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>With some content:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="Content of input">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Maxlength 12 characters:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="" maxlength="12">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>
+											<span class="ico-dribble"></span>
+											With icons:
+										</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value="" class="shiny icon">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Textarea horizontal resize only:</label>
+									</div>
+									<div class="grid2">
+										<textarea class="shiny" rows="8"></textarea>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Textarea no resize:</label>
+									</div>
+									<div class="grid2">
+										<textarea rows="8" class="shiny no-resize"></textarea>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Character count:</label>
+									</div>
+									<div class="grid2">
+										<textarea rows="8" class="shiny counter" maxlength="25"></textarea>
+										<span class="small">Textarea limited to 25 characters.</span>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Textarea with tags:</label>
+									</div>
+									<div class="grid2">
+										<input id="tags" value="foo,bar,baz,roffle" class="counter shiny">
+									</div>
+								</div>
+								
+							</div>
+							
+						</fieldset>
+						
+						
+						<fieldset>
+							
+							<div class="fluid">
+						
+								<div class="widget">
+									
+									<div class="whead">
+										<strong>Checkbox, Select</strong>
+									</div>
+									
+									<div class="box holder">
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Styled checkbox:</label>
+											</div>
+											<div class="grid2">
+												<input type="checkbox" checked>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Disabled checkbox:</label>
+											</div>
+											<div class="grid2">
+												<input type="checkbox" disabled>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Disabled and checked checkbox:</label>
+											</div>
+											<div class="grid2">
+												<input type="checkbox" disabled checked>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Simple checkbox:</label>
+											</div>
+											<div class="grid2">
+												<input type="checkbox" class="simple" checked>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Styled dropdown menu:</label>
+											</div>
+											<div class="grid2">
+												<select class="styled">
+													<option>one</option>
+													<option>two</option>
+													<option>something</option>
+													<option>4</option>
+													<option>5</option>
+												</select>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Radio buttons:</label>
+											</div>
+											<div class="grid2">
+												
+												<label class="label_radio" for="radio-01"><input name="sample-radio" id="radio-01" value="1" type="radio" checked >First</label>
+												<label class="label_radio" for="radio-02"><input name="sample-radio" id="radio-02" value="1" type="radio" >Second</label>
+												<label class="label_radio" for="radio-03"><input name="sample-radio" id="radio-03" value="1" type="radio" >Third</label>
+												
+											</div>
+										</div>
+										
+										<div class="row row-high">
+											<div class="grid3">
+												<input type="submit" value="Submit button" class="right">
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+								<div class="widget">
+									
+									<div class="whead">
+										<strong>More</strong>
+									</div>
+									
+									<div class="box holder">
+								
+										<div class="row">
+											<div class="grid1">
+												<label>Simple input field:</label>
+											</div>
+											<div class="grid2">
+												<input class="shiny" type="text" value="">
+											</div>
+										</div>
+								
+										<div class="row row-high">
+											<div class="grid1">
+												<label>Simple input field with highlight:</label>
+											</div>
+											<div class="grid2">
+												<input class="shiny" type="text" value="">
+											</div>
+										</div>
+								
+										<div class="row">
+											<div class="grid3">
+												<div class="row-note">
+													<div>
+														<p>This is some note for a row ... lorem ipsum Curabitur ut orci vel ligula fringilla hendrerit consectetur id lectus. Donec malesuada purus eu risus dictum convallis at imperdiet urna. Nullam vel lacus sit amet nisi hendrerit laoreet.</p>
+														<p>Nullam iaculis justo at felis consequat ut lobortis elit vestibulum. In a justo vitae felis hendrerit sodales et at tortor. Curabitur sagittis euismod enim, convallis ullamcorper justo pulvinar ornare.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+								
+										<div class="row no-padd row-high">
+											<ul class="messages">
+									
+												<li>
+													<a href="#">
+														<img alt="" src="img/__tmp/face1.png">
+													</a>
+													<div class="text">
+														<strong>Eugenio:</strong>
+														<span>10 minutes ago</span>
+														<br>
+														Cras iaculis tempor urna in tristique. Pellentesque mattis risus ac massa sagittis vitae auctor erat interdum. Proin vulputate, orci sit amet interdum euismod, erat leo condimentum nunc, sed tincidunt augue tellus posuere orci.
+													</div>
+												</li>
+												
+												<li class="right white">
+													<a href="#">
+														<img alt="" src="img/__tmp/face1.png">
+													</a>
+													<div class="text">
+														<strong>Marcos:</strong>
+														<span>5 hours ago</span>
+														<br>
+														Morbi vel neque dolor, vel auctor augue. Etiam convallis faucibus ante, et accumsan elit pulvinar at. Suspendisse vitae felis dui, sed consectetur erat.
+													</div>
+												</li>
+												
+											</ul>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+						</fieldset>
+						
+						
+						<fieldset>
+							
+							<div class="whead">
+								<strong>Multiple Selectors</strong>
+							</div>
+							
+							<div class="box holder over-hide">
+								<div class="grid5 padd sizing">
+									<select class="shiny" multiple="" id="select1">
+										<option value="1">Option 1</option>
+										<option value="3" selected>Option 3</option>
+										<option value="2" selected>Option 2</option>
+										<option value="4">Option 4</option>
+									</select>
+								</div>
+								<div class="grid6 padd sizing text-center">
+									<button type="button" id="t2" class="btn bottom-3"> &gt; </button>
+									<button type="button" id="t1" class="btn bottom-3"> &lt; </button> <br>
+									<button type="button" id="at2" class="btn"> &gt;&gt; </button>
+									<button type="button" id="at1" class="btn"> &lt;&lt; </button>
+								</div>
+								<div class="grid5 padd sizing">
+									<select class="shiny" multiple="" id="select2">
+										<option value="1" selected>Option 1</option>
+										<option value="3">Option 3</option>
+										<option value="2" selected>Option 2</option>
+										<option value="4">Option 4</option>
+									</select>
+								</div>
+							</div>
+							
+						</fieldset>
+						
+						
+						<fieldset>
+							
+							<div class="fluid">
+						
+								<div class="widget">
+									
+									<div class="whead">
+										<strong>Form elements</strong>
+									</div>
+									
+									<div class="box holder">
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Other elements:</label>
+											</div>
+											<div class="grid2">
+												
+												<p>
+													<button class="btn btn-large btn-primary" type="button">Large button</button>
+													<button class="btn btn-large" type="button">Large button</button>
+												</p>
+												<p>
+													<button class="btn btn-primary" type="button">Default button</button>
+													<button class="btn" type="button">Default button</button>
+												</p>
+												<p>
+													<button class="btn btn-small btn-primary" type="button">Small button</button>
+													<button class="btn btn-small" type="button">Small button</button>
+												</p>
+												<p>
+													<button class="btn btn-mini btn-primary" type="button">Mini button</button>
+													<button class="btn btn-mini" type="button">Mini button</button>
+												</p>
+												
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid1">
+												<label>Other elements:</label>
+											</div>
+											<div class="grid2">
+												
+												<button class="btn btn-large btn-block btn-primary" type="button">Block level button</button>
+												<button class="btn btn-large btn-block" type="button">Block level button</button>
+												
+											</div>
+										</div>
+										
+									
+										<div class="row">
+											<div class="grid1">
+												<label>Other elements:</label>
+											</div>
+											<div class="grid2">
+												
+												<div class="tabbable">
+													<ul class="nav nav-tabs">
+														<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+														<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+														<li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+													</ul>
+													<div class="tab-content">
+														<div class="tab-pane active" id="tab1">
+															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet quam odio, vitae rutrum elit. Duis vel libero risus, non viverra erat. Nulla interdum scelerisque eleifend. Duis massa metus, congue eu ultricies eget, scelerisque sed orci. Pellentesque in consequat orci. </p>
+														</div>
+														<div class="tab-pane" id="tab2">
+															<p>Morbi suscipit erat urna. In vulputate lacus commodo risus elementum sed mattis enim hendrerit. Nullam ac mi quis leo scelerisque congue. Aliquam erat volutpat. Quisque sed ligula lacus, sit amet dignissim erat. Nam ornare dui vitae ligula accumsan et dictum lacus mollis.</p>
+														</div>
+														<div class="tab-pane" id="tab3">
+															<p>Nulla eu neque at magna dignissim interdum ut vulputate lacus. Duis pretium pellentesque purus vel pretium. Praesent consequat consectetur urna dignissim porta. Nam at malesuada mauris. Nunc blandit urna id sapien malesuada non mollis massa imperdiet.</p>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										
+										<div class="row row-high">
+											<div class="grid3">
+													<button type="submit" class="btn btn-primary">Save changes</button>
+													<button type="button" class="btn">Cancel</button>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								
+								<div class="widget">
+									
+									<div class="whead">
+										<strong>Form elements</strong>
+									</div>
+									
+									<div class="box holder over-hide">
+									
+										<div class="row">
+											<div class="grid1">
+												<label>Other elements:</label>
+											</div>
+											<div class="grid2">
+												
+												<div class="btn-toolbar">
+													<div class="btn-group">
+														<a class="btn" href="javascript:;"><i class="icon-align-left"></i></a>
+														<a class="btn" href="javascript:;"><i class="icon-align-center"></i></a>
+														<a class="btn" href="javascript:;"><i class="icon-align-right"></i></a>
+														<a class="btn" href="javascript:;"><i class="icon-align-justify"></i></a>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									
+										<div class="row">
+											<div class="grid1">
+												<label>Other elements:</label>
+											</div>
+											<div class="grid2">
+												
+												<div class="btn-group">
+													<a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+													<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+													<ul class="dropdown-menu">
+														<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+														<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+														<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+														<li class="divider"></li>
+														<li><a href="#"><i class="i"></i> Make admin</a></li>
+													</ul>
+												</div>
+												
+											</div>
+										</div>
+									
+										<div class="row">
+											<div class="grid1">
+												<label>Other elements:</label>
+											</div>
+											<div class="grid2">
+												
+												<div class="control-group">
+												    <div class="controls">
+													    <div class="input-prepend">
+															<span class="add-on"><i class="icon-envelope"></i></span>
+															<input class="span2" id="inputIcon" type="text">
+														</div>
+													</div>
+													<div class="controls">
+														<div class="input-prepend">
+															<span class="add-on">@</span>
+															<input class="span2" id="prependedInput" type="text" placeholder="Username">
+														</div>
+													</div>
+													<div class="controls">
+														<div class="input-append">
+															<input class="span2" id="appendedInput" type="text" value="">
+															<span class="add-on">.00</span>
+														</div>
+													</div>
+													<div class="input-append">
+														<input class="span2" id="appendedInputButton" type="text">
+														<button class="btn" type="button">Go!</button>
+													</div>
+													<div class="controls">
+														<div class="input-append">
+															<input class="span2" id="appendedInputButtons" type="text">
+															<button class="btn" type="button">Search</button>
+															<button class="btn" type="button">Options</button>
+														</div>
+													</div>
+													<div class="controls">
+														<div class="input-append">
+															<input class="span2" id="appendedDropdownButton" type="text">
+															<div class="btn-group">
+																<button class="btn dropdown-toggle" data-toggle="dropdown">
+																	Action
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+																	<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+																	<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#"><i class="i"></i> Make admin</a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<div class="btn-group">
+													<button class="btn">Action</button>
+													<button class="btn dropdown-toggle" data-toggle="dropdown">
+														<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+														<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+														<li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+														<li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+														<li class="divider"></li>
+														<li><a href="#"><i class="i"></i> Make admin</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+													<button type="submit" class="btn btn-primary right">Save changes</button>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+						</fieldset>
+						
+						
+						<fieldset>
+							
+							<div class="whead">
+								<strong>Mask elements</strong>
+							</div>
+							
+							<div class="box holder">
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Date mask:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" id="date" type="text" value="">
+										<span class="small">99/99/9999</span>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Phone mask:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" id="phone" type="text" value="">
+										<span class="small">(999) 999-9999</span>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Tin mask:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" id="tin" type="text" value="">
+										<span class="small">99-9999999</span>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Ssn mask:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" id="ssn" type="text" value="">
+										<span class="small">999-99-9999</span>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Phone with code mask:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" id="phonecode" type="text" value="">
+										<span class="small">+34 9999999</span>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Css color mask:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" id="color" type="text" value="">
+										<span class="small">#hhhhhh</span>
+									</div>
+								</div>
+								
+							</div>
+						</fieldset>
+						
+						<fieldset>
+							<div class="whead">
+								<strong>Auto tabs</strong>
+							</div>
+							
+							<div class="box holder">
+								
+								<div class="row">
+									
+									<div class="grid1">
+										<label>Simple data:</label>
+									</div>
+									
+										<div class="grid2 auto-tabs">
+											<input type="text" value="" class="shiny size5" maxlength="6">
+											<input type="text" value="" class="shiny size5" maxlength="6">
+											<input type="text" value="" class="shiny size5" maxlength="6">
+											<input type="text" value="" class="shiny size5" maxlength="6">
+											<input type="text" value="" class="shiny size5" maxlength="6">
+										</div>
+										
+								</div>
+							</div>
+						</fieldset>
+						
+						<fieldset>
+							<div class="whead">
+								<strong>Input size</strong>
+							</div>
+							
+							<div class="box holder">
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Size 1:</label>
+									</div>
+									<div class="grid2">
+										<input class="shiny" type="text" value="">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Size 2:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".size2" class="size2 shiny">
+										<input type="text" value=".size2" class="size2 shiny">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Size 3:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".size3" class="size3 shiny">
+										<input type="text" value=".size3" class="size3 shiny">
+										<input type="text" value=".size3" class="size3 shiny">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Size 4:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".size4" class="size4 shiny">
+										<input type="text" value=".size4" class="size4 shiny">
+										<input type="text" value=".size4" class="size4 shiny">
+										<input type="text" value=".size4" class="size4 shiny">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Size 5:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".size5" class="shiny size5">
+										<input type="text" value=".size5" class="shiny size5">
+										<input type="text" value=".size5" class="shiny size5">
+										<input type="text" value=".size5" class="shiny size5">
+										<input type="text" value=".size5" class="shiny size5">
+									</div>
+								</div>
+								
+								
+							</div>
+						</fieldset>
+						
+						<fieldset>
+							<div class="whead">
+								<strong>Highlights</strong>
+							</div>
+							
+							<div class="box holder">
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Blue highlight:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".blue-high" class="shiny blue-high">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Red highlight:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".red-high" class="shiny red-high">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Yellow highlight:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".yellow-high" class="shiny yellow-high">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Black highlight:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".black-high" class="shiny black-high">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Green highlight:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".green-high" class="shiny green-high">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="grid1">
+										<label>Violet highlight:</label>
+									</div>
+									<div class="grid2">
+										<input type="text" value=".violet-high" class="shiny violet-high">
+									</div>
+								</div>
+							
+							</div>
+						</fieldset>
+						
+						<fieldset>
+							
+							<div class="fluid">
+						
+								<div class="widget">
+									
+									<div class="whead">
+										<strong>Right align</strong>
+									</div>
+									
+									<div class="box holder">
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size5 .right" class="shiny size5 right">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size4 .right" class="shiny size4 right">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size3 .right" class="shiny size3 right">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size2 .right" class="shiny size2 right">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".right" class="shiny right">
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+								<div class="widget">
+									
+									<div class="whead">
+										<strong>Left align</strong>
+									</div>
+									
+									<div class="box holder">
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size5" class="shiny size5">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size4" class="shiny size4">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size3" class="shiny size3">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value=".size2" class="shiny size2">
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="grid3">
+												<input type="text" value="" class="shiny">
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+						</fieldset>
+						
+					</form>
+				</div>
+				
+			</div>
+		</div> <!-- /container -->
+		
+        <script src="js/vendor/jquery-ui-1.10.2.custom.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/tweenLite/TweenMax.min.js"></script>
+        <script src="js/vendor/jquery.sparkline.min.js"></script>
+        <script src="js/vendor/prettify.js"></script>
+        <script src="js/vendor/jquery.flot.js"></script>
+        <script src="js/vendor/fullcalendar.min.js"></script>
+        <script src="js/vendor/beautiful-data.min.js"></script>
+        <script src="js/vendor/ckeditor/ckeditor.js"></script>
+        <script src="js/vendor/jquery.tagsinput.min.js"></script>
+        <script src="js/vendor/jquery.maskedinput.min.js"></script>
+        <script src="js/vendor/jquery.customselect.min.js"></script>
+        <script src="js/vendor/jquery.radiostyling.js"></script>
+        <script src="js/vendor/jquery.mcustomscrollbar.concat.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/page/forms.js"></script>
+		
+    </body>
+</html>

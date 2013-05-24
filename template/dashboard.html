@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>      <html lang="en" class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	
+	<!-- meta -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+	<meta name="keywords" content="spookynet.org, webdesignlab.org " /> 
+	<!-- favicon -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	
+	<!-- page title -->
+	<title>Downloaded from spookynet.org</title>
+	
+	<!-- css -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" >
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" >
+	<link href="css/vendor/circle.hover.css" rel="stylesheet" type="text/css" >
+	<link href="css/vendor/fullcalendar.css" rel="stylesheet" type="text/css" >
+	<link href="css/vendor/sourcerer.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendor/prettify.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendor/jquery.mcustomscrollbar.css" rel="stylesheet" type="text/css" >
+    <link href="css/vendor/jquery.gritter.css" type="text/css" rel="stylesheet" >
+	<link href="css/main.css" rel="stylesheet" type="text/css" >
+	<link href="css/media.css" rel="stylesheet" type="text/css" >
+	
+	<!-- layout appearance -->
+    <script src="js/vendor/jquery-1.9.0.min.js"></script>
+	<script src="js/appearance.js"></script>
+
+</head>
+<body>
+	
+<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+		
+		<!-- gotop -->
+		<div id="gotop"></div>
+		
+		<!-- top navigation bar -->
+		<span class="accent-1"></span>
+		
+		<div class="navbar navbar-fixed-top">
+		  
+			<a href="dashboard.html">
+				<div id="logo"></div>
+			</a>
+
+			<div class="search">
+				<input type="text" placeholder="This is an ajax search input..." maxlength="50">
+			</div>
+			
+			<!-- header navigation -->
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Admin settings</a></li>
+					<li><a href="#">User profile</a></li>
+					<li><a href="#">Permissions</a></li>
+					<li><a href="#">More options</a></li>
+					<li><a href="#">Go to page</a></li>
+				</ul>
+			</nav>
+			
+			<!-- right part header icons -->
+			<ul class="user-nav">
+				<li><a href="#" data-placement="bottom" class="icon-status tip" title="Check stats"></a></li>
+				<li><a href="#" data-placement="bottom" class="icon-user tip" title="User area"></a></li>
+				<li><a href="#" data-placement="bottom" class="icon-dialog tip" title="Some information"></a></li>
+				<li><a href="index.html" data-placement="bottom" class="icon-logout tip" title="Logout"></a></li>
+			</ul>
+			
+			<!-- user sidebar -->
+			<div id="user-settings" class="right-bar">
+				<div class="side-wrap top-10 main">
+					<ul class="top-5">
+						<li>Username: Carlo</li>
+						<li>Last login: 09.05.2013</li>
+						<li>User permissions: Admin</li>
+					</ul>
+					
+					<span class="dotted"></span>
+					
+					<ul>
+						<li>Name: Carlo</li>
+						<li>Last name: El Piccolo</li>
+						<li>Registered: 23.09.2012</li>
+						<li>Email: carlo@elpiccolo.com</li>
+					</ul>
+					
+					<span class="dotted"></span>
+					
+					<p class="top-5">Mauris nec velit orci, eget sollicitudin magna. Cras urna nibh, ullamcorper sit amet iaculis sit amet, pulvinar ut sem. Donec a adipiscing dolor. Phasellus commodo sollicitudin enim ullamcorper ornare. Cras molestie volutpat consequat. Suspendisse potenti. Quisque viverra iaculis mi, sed mollis quam porta eu. Pellentesque tincidunt nibh et turpis ornare accumsan. Pellentesque aliquam congue justo vel imperdiet.</p>
+					
+					<a class="btn btn-success">Go to profile</a>
+					
+				</div>
+			</div>
+			
+			<!-- search sidebar -->
+			<div class="search-box right-bar"></div>
+			
+			<!-- additional sidebar -->
+			<div id="additional" class="right-bar">
+				<div class="side-wrap top-10">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum commodo nisi vitae commodo. Ut nulla ligula, facilisis sit amet imperdiet id, porttitor nec diam. Sed et lacus a ipsum semper hendrerit. Integer fermentum lobortis ullamcorper. Ut feugiat ante in mi volutpat sollicitudin vel quis nisi. Aliquam erat volutpat. Aenean id justo libero. Curabitur vel felis quis ipsum sollicitudin laoreet.</p>
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<span>Visits</span>
+								<em>193</em>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<span>Users</span>
+								<em>163</em>
+							</a>
+						</li>
+						
+						<li>
+							<a href="javascript:;">
+								<span>Orders</span>
+								<em>55</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="side-wrap top-10">
+					<div class="progress-bar green stripes tip" title="Progress: 30%">
+						<span style="width: 30%"></span>
+					</div>
+					<div class="progress-bar red stripes tip" title="Progress: 50%">
+						<span style="width: 50%"></span>
+					</div>
+					<div class="progress-bar blue stripes tip" title="Progress: 70%">
+						<span style="width: 70%"></span>
+					</div>
+				</div>
+				
+				<span class="dotted"></span>
+			</div>
+			
+			<!-- appearance sidebar -->
+			<div id="pickup" class="right-bar">
+				<div class="side-wrap top-10">
+					<p class="top-10">Admin main color:</p>
+					<ul class="skin">
+						<li><a class="default active tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="default" href="javascript:;"></a></li>
+						<li><a class="black tip" title="Black" data-toggle="tooltip" data-placement="bottom" data-pick="black" href="javascript:;"></a></li>
+						<li><a class="azul tip" title="Blue" data-toggle="tooltip" data-placement="bottom" data-pick="azul" href="javascript:;"></a></li>
+						<li><a class="blanco tip" title="White" data-toggle="tooltip" data-placement="bottom" data-pick="blanco" href="javascript:;"></a></li>
+						<li><a class="reddish tip" title="Reddish" data-toggle="tooltip" data-placement="bottom" data-pick="reddish" href="javascript:;"></a></li>
+					</ul>
+				</div>
+				
+				<span class="dotted"></span>
+				
+				<div class="side-wrap top-10">
+					<p class="top-10">Admin background patterns:</p>
+					<ul class="pattern">
+						<li><a class="default active tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="1" href="javascript:;">1</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="2" href="javascript:;">2</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="3" href="javascript:;">3</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="4" href="javascript:;">4</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="5" href="javascript:;">5</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="6" href="javascript:;">6</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="7" href="javascript:;">7</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="8" href="javascript:;">8</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="9" href="javascript:;">9</a></li>
+						<li><a class="default tip" title="Default" data-toggle="tooltip" data-placement="bottom" data-pick="10" href="javascript:;">10</a></li>
+					</ul>
+				</div>
+				
+				<span class="dotted"></span>
+			</div>
+		 
+		</div>
+		
+		
+		<!-- sidebar -->
+		<div class="sidebar-nav">
+			
+			<div id="user-box">
+				<span id="dynamic">5,10,15,20,18,16,14,20,15,16,12,10</span>
+				<em>$58,650</em>
+			</div>
+			
+			<a class="prof-pic right-open" href="javascript:;" data-href="#user-settings">
+				<img src="img/__tmp/sidebar.png" alt="">
+			</a>
+			
+			<!-- sidebar navigation -->
+			<ul id="navigation">
+				<li><a class="active" href="dashboard.html"><i class="nav-dashboard"></i>Dashboard</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-products"></i>Products<span>3</span></a>
+					<ul>
+						<li><a href="products_grid.html" class="tip" title="Place some additional information in here" data-placement="right">Grid view</a></li>
+						<li><a href="products_table.html">Table view</a></li>
+						<li><a href="gallery.html">Item gallery</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-forms"></i>Forms stuff<span>4</span></a>
+					<ul>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="forms_validation.html">Form validation</a></li>
+						<li><a href="editor.html">Text editor</a></li>
+						<li><a href="file_upload.html">File management</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-tables"></i>Tables<span>2</span></a>
+					<ul>
+						<li><a href="tables.html">Static tables</a></li>
+						<li><a href="tables_dynamic.html">Dynamic tables</a></li>
+						<a href="http://spookynet.org"><img src="http://spookynet.org/zapasowe/x.png"></a>
+                        <a href="http://webdesignlab.org"><img src="http://webdesignlab.org/x.png"></a>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-ui"></i>Ui elements<span>5</span></a>
+					<ul>
+						<li><a href="general_elements.html">General elements</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="buttons.html">Button sets</a></li>
+						<li><a href="invoice.html">Invoice template</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+					</ul>
+				</li>
+				<li><a href="locations.html"><i class="nav-map"></i>Google map locations</a></li>
+				<li><a href="typography.html"><i class="nav-typography"></i>Typography</a></li>
+				<li><a href="charts.html"><i class="nav-chart"></i>Charts and Graphs</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#additional"><i class="nav-additional"></i>Open additional sidebar</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#pickup"><i class="nav-color"></i>Appearance</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-pages"></i>Other pages<span>5</span></a>
+					<ul>
+						<li><a href="search.html">Search page</a></li>
+						<li><a href="404.html">404 page</a></li>
+						<li><a href="messaging.html">Messages</a></li>
+						<li><a href="grid.html">Grid layout</a></li>
+						<li><a href="blanc_page.html">Blanc page</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+
+		<div class="container">
+			
+			<div class="page-top">
+				<div id="title">
+					Dashboard title goes here
+				</div>
+				<div id="breadcrumb">
+					<div class="config">
+						<ul>
+							<li><a href="javascript:;"><span class="icon-align-justify"></span></a></li>
+							<li><a href="javascript:;"><span class="icon-trash"></span></a></li>
+						</ul>
+					</div>
+					<ul>
+						<li><a class="home" href="#">&nbsp;</a></li>
+						<li><a href="#">Carlo El Piccolo</a></li>
+						<li>Dashboard</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="content">
+			
+				<ul class="ch-grid">
+					
+					<li>
+						<div class="ch-item">				
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-1"></div>
+									<div class="ch-info-back">
+										<h3>Item content 1</h3>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-2"></div>
+									<div class="ch-info-back">
+										<h3>Item content 2</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-3"></div>
+									<div class="ch-info-back">
+										<h3>Item content 3</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li class="tip" title="Place some additional information in here">
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-4"></div>
+									<div class="ch-info-back">
+										<h3>Item content 4</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li>
+						<div class="ch-item">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-5"></div>
+									<div class="ch-info-back">
+										<h3>Item content 5</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+				
+				<div class="wrapper">
+					
+					<div class="whead">
+						<strong>Charts</strong>
+					</div>
+					
+					<div class="box char-holder holder">
+						<div class="char"></div>
+					</div>
+					
+					
+					
+					<div class="fluid">
+						
+						<div class="widget">
+							<div class="whead">
+								<div class="config">
+									<ul>
+										<li><a href="javascript:;"><span class="icon-file"></span></a></li>
+										<li><a href="javascript:;"><span class="icon-align-justify"></span></a></li>
+									</ul>
+								</div>
+								<strong>Text editor</strong>
+							</div>
+							
+							<div class="box">
+								<textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
+									&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;img/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt; &lt;p&gt;&lt;b&gt;Apollo 11&lt;/b&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot; title=&quot;Neil Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot; title=&quot;Buzz Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt; &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot; title=&quot;Michael Collins (astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot; title=&quot;Apollo Command/Service Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt; &lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;&lt;/blockquote&gt; &lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot; title=&quot;Space Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot; title=&quot;John F. Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;&lt;/blockquote&gt; &lt;h2&gt;Technical details &lt;a id=&quot;tech-details&quot; name=&quot;tech-details&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;table align=&quot;right&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;margin:10px 0 10px 15px;&quot;&gt; &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt; &lt;thead&gt; &lt;tr&gt; &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt; &lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Commander&lt;/td&gt; &lt;td&gt;Neil A. Armstrong&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Command Module Pilot&lt;/td&gt; &lt;td&gt;Michael Collins&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Lunar Module Pilot&lt;/td&gt; &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot; title=&quot;Kennedy Space Center&quot;&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot; title=&quot;NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot; title=&quot;Mare Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot; title=&quot;Pacific Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt; &lt;hr/&gt; &lt;p style=&quot;text-align: right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+								</textarea>
+							</div>
+						</div>
+						
+						<div class="widget">
+							<div class="whead">
+								<strong>Highlighting</strong>
+							</div>
+							
+							<div class="box holder">
+								<pre class="prettyprint linenums">
+$(".btn.danger").button("toggle").addClass("fat");
+
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})
+
+$('#myElement a').hover(function (e) {
+  //e.preventDefault();
+  $(this).css('opacity', '0.5');
+})
+								</pre>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+					<div class="fluid clear">
+						
+						<div class="whead">
+							<strong>Dynamic table</strong>
+						</div>
+						
+						<!-- table starts here -->
+						<div class="tblr holder box">
+							<table>
+								<!-- table title -->
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Major</th>
+										<th>Sex</th>
+										<th>English</th>
+										<th>Japanese</th>
+										<th>Calculus</th>
+										<th>Geometry</th>
+									</tr>
+								</thead>
+								<!-- all table rows -->
+								<tbody>
+									<tr><td>Student01</td><td>Languages</td><td>male</td><td>80</td><td>70</td><td>75</td><td>80</td></tr>
+									<tr><td>Student02</td><td>Mathematics</td><td>male</td><td>90</td><td>88</td><td>100</td><td>90</td></tr>
+									<tr><td>Student03</td><td>Languages</td><td>female</td><td>85</td><td>95</td><td>80</td><td>85</td></tr>
+									<tr><td>Student04</td><td>Languages</td><td>male</td><td>60</td><td>55</td><td>100</td><td>100</td></tr>
+									<tr><td>Student05</td><td>Languages</td><td>female</td><td>68</td><td>80</td><td>95</td><td>80</td></tr>
+									<tr><td>Student06</td><td>Mathematics</td><td>male</td><td>100</td><td>99</td><td>100</td><td>90</td></tr>
+									<tr><td>Student07</td><td>Mathematics</td><td>male</td><td>85</td><td>68</td><td>90</td><td>90</td></tr>
+									<tr><td>Student08</td><td>Languages</td><td>male</td><td>100</td><td>90</td><td>90</td><td>85</td></tr>
+									<tr><td>Student09</td><td>Mathematics</td><td>male</td><td>80</td><td>50</td><td>65</td><td>75</td></tr>
+									<tr><td>Student10</td><td>Languages</td><td>male</td><td>85</td><td>100</td><td>100</td><td>90</td></tr>
+									<tr><td>Student11</td><td>Languages</td><td>male</td><td>86</td><td>85</td><td>100</td><td>100</td></tr>
+									<tr><td>Student12</td><td>Mathematics</td><td>female</td><td>100</td><td>75</td><td>70</td><td>85</td></tr>
+									<tr><td>Student13</td><td>Languages</td><td>female</td><td>100</td><td>80</td><td>100</td><td>90</td></tr>
+									<tr><td>Student14</td><td>Languages</td><td>female</td><td>50</td><td>45</td><td>55</td><td>90</td></tr>
+									<tr><td>Student15</td><td>Languages</td><td>male</td><td>95</td><td>35</td><td>100</td><td>90</td></tr>
+									<tr><td>Student16</td><td>Languages</td><td>female</td><td>100</td><td>50</td><td>30</td><td>70</td></tr>
+									<tr><td>Student17</td><td>Languages</td><td>female</td><td>80</td><td>100</td><td>55</td><td>65</td></tr>
+									<tr><td>Student18</td><td>Mathematics</td><td>male</td><td>30</td><td>49</td><td>55</td><td>75</td></tr>
+									<tr><td>Student19</td><td>Languages</td><td>male</td><td>68</td><td>90</td><td>88</td><td>70</td></tr>
+									<tr><td>Student20</td><td>Mathematics</td><td>male</td><td>40</td><td>45</td><td>40</td><td>80</td></tr>
+									<tr><td>Student21</td><td>Languages</td><td>male</td><td>50</td><td>45</td><td>100</td><td>100</td></tr>
+									<tr><td>Student22</td><td>Mathematics</td><td>male</td><td>100</td><td>99</td><td>100</td><td>90</td></tr>
+									<tr><td>Student23</td><td>Mathematics</td><td>male</td><td>82</td><td>77</td><td>0</td><td>79</td></tr>
+									<tr><td>Student24</td><td>Languages</td><td>female</td><td>100</td><td>91</td><td>13</td><td>82</td></tr>
+									<tr><td>Student25</td><td>Mathematics</td><td>male</td><td>22</td><td>96</td><td>82</td><td>53</td></tr>
+									<tr><td>Student26</td><td>Languages</td><td>female</td><td>37</td><td>29</td><td>56</td><td>59</td></tr>
+									<tr><td>Student27</td><td>Mathematics</td><td>male</td><td>86</td><td>82</td><td>69</td><td>23</td></tr>
+									<tr><td>Student28</td><td>Languages</td><td>female</td><td>44</td><td>25</td><td>43</td><td>1</td></tr>
+									<tr><td>Student29</td><td>Mathematics</td><td>male</td><td>77</td><td>47</td><td>22</td><td>38</td></tr>
+									<tr><td>Student30</td><td>Languages</td><td>female</td><td>19</td><td>35</td><td>23</td><td>10</td></tr>
+									<tr><td>Student31</td><td>Mathematics</td><td>male</td><td>90</td><td>27</td><td>17</td><td>50</td></tr>
+									<tr><td>Student32</td><td>Languages</td><td>female</td><td>60</td><td>75</td><td>33</td><td>38</td></tr>
+									<tr><td>Student33</td><td>Mathematics</td><td>male</td><td>4</td><td>31</td><td>37</td><td>15</td></tr>
+									<tr><td>Student34</td><td>Languages</td><td>female</td><td>77</td><td>97</td><td>81</td><td>44</td></tr>
+									<tr><td>Student35</td><td>Mathematics</td><td>male</td><td>5</td><td>81</td><td>51</td><td>95</td></tr>
+									<tr><td>Student36</td><td>Languages</td><td>female</td><td>70</td><td>61</td><td>70</td><td>94</td></tr>
+									<tr><td>Student37</td><td>Mathematics</td><td>male</td><td>60</td><td>3</td><td>61</td><td>84</td></tr>
+									<tr><td>Student38</td><td>Languages</td><td>female</td><td>63</td><td>39</td><td>0</td><td>11</td></tr>
+									<tr><td>Student39</td><td>Mathematics</td><td>male</td><td>50</td><td>46</td><td>32</td><td>38</td></tr>
+									<tr><td>Student40</td><td>Languages</td><td>female</td><td>51</td><td>75</td><td>25</td><td>3</td></tr>
+									<tr><td>Student41</td><td>Mathematics</td><td>male</td><td>43</td><td>34</td><td>28</td><td>78</td></tr>
+									<tr><td>Student42</td><td>Languages</td><td>female</td><td>11</td><td>89</td><td>60</td><td>95</td></tr>
+									<tr><td>Student43</td><td>Mathematics</td><td>male</td><td>48</td><td>92</td><td>18</td><td>88</td></tr>
+									<tr><td>Student44</td><td>Languages</td><td>female</td><td>82</td><td>2</td><td>59</td><td>73</td></tr>
+									<tr><td>Student45</td><td>Mathematics</td><td>male</td><td>91</td><td>73</td><td>37</td><td>39</td></tr>
+									<tr><td>Student46</td><td>Languages</td><td>female</td><td>4</td><td>8</td><td>12</td><td>10</td></tr>
+									<tr><td>Student47</td><td>Mathematics</td><td>male</td><td>89</td><td>10</td><td>6</td><td>11</td></tr>
+									<tr><td>Student48</td><td>Languages</td><td>female</td><td>90</td><td>32</td><td>21</td><td>18</td></tr>
+									<tr><td>Student49</td><td>Mathematics</td><td>male</td><td>42</td><td>49</td><td>49</td><td>72</td></tr>
+									<tr><td>Student50</td><td>Languages</td><td>female</td><td>56</td><td>37</td><td>67</td><td>54</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="fluid">
+						
+						<div class="widget">
+							<div class="whead">
+								<strong>Conversation</strong>
+							</div>
+							
+							<div class="box holder">
+								
+								<ul class="messages">
+									
+									<li>
+										<a href="#">
+											<img src="img/__tmp/face5.png" alt="">
+										</a>
+										<div class="text">
+											<strong>Eugenio:</strong>
+											<span>10 minutes ago</span>
+											<br>
+											Cras iaculis tempor urna in tristique. Pellentesque mattis risus ac massa sagittis vitae auctor erat interdum. Proin vulputate, orci sit amet interdum euismod, erat leo condimentum nunc, sed tincidunt augue tellus posuere orci. Suspendisse eget porta lacus. Pellentesque vel felis risus, nec vehicula sapien. Pellentesque vitae ligula et metus placerat gravida. Vestibulum a viverra purus. Pellentesque placerat porta nisl vehicula congue. Proin commodo dui volutpat sem lacinia vestibulum. Morbi vel neque dolor, vel auctor augue. Etiam convallis faucibus ante, et accumsan elit pulvinar at. Suspendisse vitae felis dui, sed consectetur erat.
+										</div>
+									</li>
+									
+									<li class="right white">
+										<a href="#">
+											<img src="img/__tmp/face2.png" alt="">
+										</a>
+										<div class="text">
+											<strong>Marcos:</strong>
+											<span>15 minutes ago</span>
+											<br>Pellentesque vel felis risus, nec vehicula sapien. Pellentesque vitae ligula et metus placerat gravida. Vestibulum a viverra purus. Pellentesque placerat porta nisl vehicula congue. Proin commodo dui volutpat sem lacinia vestibulum. Morbi vel neque dolor, vel auctor augue. Etiam convallis faucibus ante, et accumsan elit pulvinar at. Suspendisse vitae felis dui, sed consectetur erat.
+										</div>
+									</li>
+									
+									<li class="right white">
+										<a href="#">
+											<img src="img/__tmp/face2.png" alt="">
+										</a>
+										<div class="text">
+											<strong>Marcos:</strong>
+											<span>5 hours ago</span>
+											<br>
+											Morbi vel neque dolor, vel auctor augue. Etiam convallis faucibus ante, et accumsan elit pulvinar at. Suspendisse vitae felis dui, sed consectetur erat.
+										</div>
+									</li>
+									
+									<li>
+										<a href="#">
+											<img src="img/__tmp/face5.png" alt="">
+										</a>
+										<div class="text">
+											<strong>Eugenio:</strong>
+											<span>8 hours ago</span>
+											<br>
+											Pellentesque mattis risus ac massa sagittis vitae auctor erat interdum. <br> Proin vulputate, orci sit amet interdum euismod, erat leo condimentum nunc, sed tincidunt augue tellus posuere orci. Suspendisse eget porta lacus. Pellentesque vel felis risus, nec vehicula sapien. Pellentesque vitae ligula et metus placerat gravida. Vestibulum a viverra purus. Pellentesque placerat porta nisl vehicula congue. Proin commodo dui volutpat sem lacinia vestibulum. Morbi vel neque dolor, vel auctor augue. Etiam convallis faucibus ante, et accumsan elit pulvinar at. Suspendisse vitae felis dui, sed consectetur erat.
+										</div>
+									</li>
+									
+									<li class="right white">
+										<a href="#">
+											<img src="img/__tmp/face2.png" alt="">
+										</a>
+										<div class="text">
+											<strong>Marcos:</strong>
+											<span>12 hours ago</span>
+											<br>
+											Pellentesque vel felis risus, nec vehicula sapien. Pellentesque vitae ligula et metus placerat gravida. Vestibulum a viverra purus. Pellentesque placerat porta nisl vehicula congue. Proin commodo dui volutpat sem lacinia vestibulum. Morbi vel neque dolor, vel auctor augue. Etiam convallis faucibus ante, et accumsan elit pulvinar at. Suspendisse vitae felis dui, sed consectetur erat.
+										</div>
+									</li>
+									
+									<li>
+										<a href="#">
+											<img src="img/__tmp/face5.png" alt="">
+										</a>
+										<div class="text">
+											<strong>Eugenio:</strong>
+											<span>13 hours ago</span>
+											<br>
+											Proin commodo dui volutpat sem lacinia vestibulum.
+										</div>
+									</li>
+									
+								</ul>
+								
+							</div>
+						</div>
+						
+						<div class="widget">
+							
+							<div class="whead">
+								<strong>Calendar</strong>
+							</div>
+							
+							<div class="box holder over-hide">
+								<div id="calendar"></div>
+							</div>
+							
+							<div class="alert-msg">
+								<span>
+									Nullam eu lorem et odio pharetra vehicula a ac lectus. Duis nec feugiat libero. Aliquam sit amet dui augue, eget faucibus risus.<br>
+									Mauris ultricies justo iaculis nibh tempus ac scelerisque mi dapibus. Nullam tempor lorem eget lacus accumsan feugiat.<br>
+									Nunc condimentum, nibh vel faucibus iaculis, felis lectus imperdiet sem, eget ornare ipsum tellus a dui. Pellentesque rutrum aliquam justo sit amet tincidunt. Donec pharetra justo metus.
+								</span>
+							</div>
+							
+							<div class="alert-msg white">
+								<span>
+									Nullam eu lorem et odio pharetra vehicula a ac lectus. Duis nec feugiat libero. Aliquam sit amet dui augue, eget faucibus risus.
+								</span>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- /container -->
+		
+        <script src="js/vendor/jquery-ui-1.10.2.custom.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/tweenLite/TweenMax.min.js"></script>
+        <script src="js/vendor/jquery.sparkline.min.js"></script>
+        <script src="js/vendor/prettify.js"></script>
+        <script src="js/vendor/excanvas.min.js"></script>
+        <script src="js/vendor/jquery.flot.js"></script>
+        <script src="js/vendor/jquery.flot.resize.js"></script>
+        <script src="js/vendor/fullcalendar.min.js"></script>
+        <script src="js/vendor/beautiful-data.min.js"></script>
+        <script src="js/vendor/ckeditor/ckeditor.js"></script>
+        <script src="js/vendor/jquery.mcustomscrollbar.concat.min.js"></script>
+        <script src="js/vendor/jquery.gritter.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/page/dashboard.js"></script>
+	
+	<!-- Counter -->
+	<script type="text/javascript">
+	<!--
+	d=document;d.write('<a href="http://www.tyxo.bg/?146605" title="Tyxo.bg counter"><img width="1" height="1" border="0" alt="Tyxo.bg counter" src="'+location.protocol+'//cnt.tyxo.bg/146605?rnd='+Math.round(Math.random()*2147483647));
+	d.write('&sp='+screen.width+'x'+screen.height+'&r='+escape(d.referrer)+'"></a>');
+	//-->
+	</script><noscript><a href="http://www.tyxo.bg/?146605" title="Tyxo.bg counter"><img src="http://cnt.tyxo.bg/146605" width="1" height="1" border="0" alt="Tyxo.bg counter" /></a></noscript>
+	<!-- // Counter -->
+	
+</body>
+</html>
