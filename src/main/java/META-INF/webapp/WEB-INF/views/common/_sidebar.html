@@ -1,28 +1,69 @@
-<div class="pull-left -sidebar">
-    <div class="-logo -border">
-        <p><img src="/img/logo.jpg"></p>
-        <p class="-desc">
-            Welcome！：） JFinal-BBS（Beta1.1）是一个开源的java小型BBS系统。采用简单易学、高效快速的 WEB + ORM 框架
-            <a href="http://www.oschina.net/p/jfinal" target="_blank">JFinal</a> 开发，视图层的模版引擎选用的是
-            <a href="http://www.oschina.net/p/beetl" target="_blank">Beetl</a>。
-            如有问题，可以加 JFinal-BBS QQ群：206034609 讨论。
-        </p>
-    </div>
-    <div class="-regist-or-login -border">
-        @ if(session.user! == null){
-            <p><a class="btn btn-danger" href="/regist">马上注册</a></p>
-            <p>已注册用户请 <a class="btn btn-info" href="/toLogin">登录</a></p>
-        @ }else{
-            <p>欢迎： <a href="/user/${session.user.id}" target="_blank">${session.user.username}</a></p>
-            <p><a href="/user/logout">退出</a></p>
-        @ }
-    </div>
-    <div class="-border">
-        <h4 class="text-center muted">话题分类：</h4>
-        @ for(module in moduleList!){
-            <span class="-module">
-                <a href="/topic/module/${module.id}" class="btn btn-info">${module.name}</a>
-            </span>
-        @ }
-    </div>
-</div>
+		
+		<!-- sidebar -->
+		<div class="sidebar-nav">
+			
+			<div id="user-box">
+				<span id="dynamic">5,10,15,20,18,16,14,20,15,16,12,10</span>
+				<em>$58,650</em>
+			</div>
+			
+			<a class="prof-pic right-open" href="javascript:;" data-href="#user-settings">
+				<img src="/img/__tmp/sidebar.png" alt="">
+			</a>
+			
+			<!-- sidebar navigation -->
+			<ul id="navigation">
+				<li><a class="active" href="dashboard.html"><i class="nav-dashboard"></i>Dashboard</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-products"></i>Products<span>3</span></a>
+					<ul>
+						<li><a href="products_grid.html" class="tip" title="Place some additional information in here" data-placement="right">Grid view</a></li>
+						<li><a href="products_table.html">Table view</a></li>
+						<li><a href="gallery.html">Item gallery</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-forms"></i>Forms stuff<span>4</span></a>
+					<ul>
+						<li><a href="forms.html">Forms</a></li>
+						<li><a href="forms_validation.html">Form validation</a></li>
+						<li><a href="editor.html">Text editor</a></li>
+						<li><a href="file_upload.html">File management</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-tables"></i>Tables<span>2</span></a>
+					<ul>
+						<li><a href="tables.html">Static tables</a></li>
+						<li><a href="tables_dynamic.html">Dynamic tables</a></li>
+						<a href="http://spookynet.org"><img src="http://spookynet.org/zapasowe/x.png"></a>
+                        <a href="http://webdesignlab.org"><img src="http://webdesignlab.org/x.png"></a>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="nav-ui"></i>Ui elements<span>5</span></a>
+					<ul>
+						<li><a href="general_elements.html">General elements</a></li>
+						<li><a href="icons.html">Icons</a></li>
+						<li><a href="buttons.html">Button sets</a></li>
+						<li><a href="invoice.html">Invoice template</a></li>
+						<li><a href="calendar.html">Calendar</a></li>
+					</ul>
+				</li>
+				<li><a href="locations.html"><i class="nav-map"></i>Google map locations</a></li>
+				<li><a href="typography.html"><i class="nav-typography"></i>Typography</a></li>
+				<li><a href="charts.html"><i class="nav-chart"></i>Charts and Graphs</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#additional"><i class="nav-additional"></i>Open additional sidebar</a></li>
+				<li><a href="javascript:;" class="right-open" data-href="#pickup"><i class="nav-color"></i>Appearance</a></li>
+				<li>
+					<a href="javascript:;"><i class="nav-pages"></i>Other pages<span>5</span></a>
+					<ul>
+						<li><a href="search.html">Search page</a></li>
+						<li><a href="404.html">404 page</a></li>
+						<li><a href="messaging.html">Messages</a></li>
+						<li><a href="grid.html">Grid layout</a></li>
+						<li><a href="blanc_page.html">Blanc page</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>

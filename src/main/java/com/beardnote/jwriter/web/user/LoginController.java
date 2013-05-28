@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.beardnote.common.constants.Constants;
+import com.beardnote.common.controller.BaseController;
 import com.beardnote.jwriter.model.User;
 
 @Controller
-public class LoginController {
+public class LoginController extends BaseController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
@@ -23,7 +24,7 @@ public class LoginController {
         user.setUsername("zhaopeng");
         request.getSession().setAttribute(Constants.Front.USER_KEY, user);
         // return "redirect:/app/frontPage/CACHEY,frontPage,1,1";
-        return "redirect:/";
+        return r("/");
     }
 
 }

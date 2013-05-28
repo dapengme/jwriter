@@ -79,7 +79,7 @@
 		<property name="check" value="2" />
 		<property name="suffix" value=".html" />
 		<property name="charset" value="UTF-8" />
-		<property name="statementStart" value="&lt;!--:" />
+		<property name="statementStart" value="&lt;!--#" />
 		<property name="statementEnd" value="--&gt;" />
 	</bean>
 	<bean id="viewResolver" class="org.bee.tl.ext.spring.BeetlSpringViewResolver">

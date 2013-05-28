@@ -117,7 +117,7 @@ function callMessages() {
 		// (string | mandatory) the text inside the notification
 		text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" style="color:#ccc">magnis dis parturient</a> montes, nascetur ridiculus mus.',
 		// (string | optional) the image to display on the left
-		image: 'img/__tmp/sidebar.png',
+		image: '/img/__tmp/sidebar.png',
 		// (bool | optional) if you want it to fade out on its own or just sit there
 		sticky: false,
 		// (int | optional) the time you want it to be alive for before fading out

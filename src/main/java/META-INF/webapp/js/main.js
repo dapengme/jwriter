@@ -322,4 +322,59 @@ $(document).ready(function() {
 		}
 	});
 	
+	//init epiceditor
+	var opts = {
+	  container: 'epiceditor',
+	  textarea: null,
+	  basePath: '/js/vendor/epiceditor',
+	  clientSideStorage: true,
+	  localStorageName: 'epiceditor',
+	  useNativeFullsreen: true,
+	  parser: marked,
+	  file: {
+	    name: 'epiceditor',
+	    defaultContent: '',
+	    autoSave: 100
+	  },
+	  theme: {
+	    base: '/themes/base/epiceditor.css',
+	    preview: '/themes/preview/github.css',
+	    editor: '/themes/editor/epic-light.css'
+	  },
+	  button: {
+	    preview: true,
+	    fullscreen: true
+	  },
+	  focusOnLoad: false,
+	  shortcut: {
+	    modifier: 18,
+	    fullscreen: 70,
+	    preview: 80
+	  },
+	  string: {
+	    togglePreview: 'Toggle Preview Mode',
+	    toggleEdit: 'Toggle Edit Mode',
+	    toggleFullscreen: 'Enter Fullscreen'
+	  }
+	}
+	var editor = new EpicEditor(opts);
+	editor.load();
+	
+	$("#app-blog-post-btn").click(function(){
+		var title=$("#app-blog-title").val();
+		var description= editor.exportFile();
+        $.ajax({
+            type: "post",
+            url: "/apps/blog/post",
+            dataType: "json",
+            data:{title:title,description:description},
+            success: function(data) {
+            	alert(data);
+            },
+            error: function(xml, e) {
+            }
+        });
+	});
+	
+	
 });
