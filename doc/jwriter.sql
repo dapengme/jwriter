@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 08, 2013 at 07:41 AM
+-- Generation Time: May 29, 2013 at 05:17 AM
 -- Server version: 5.0.90
 -- PHP Version: 5.2.14
 
@@ -18,6 +18,67 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `jwriter`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apps`
+--
+
+CREATE TABLE IF NOT EXISTS `apps` (
+  `id` int(11) NOT NULL auto_increment,
+  `app_name` varchar(100) NOT NULL,
+  `app_description` int(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `apps`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `app_blog`
+--
+
+CREATE TABLE IF NOT EXISTS `app_blog` (
+  `id` int(11) NOT NULL auto_increment,
+  `url` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `app_blog`
+--
+
+INSERT INTO `app_blog` (`id`, `url`, `username`, `password`) VALUES
+(1, 'http://localhost:801/wordpress/xmlrpc.php', 'zhaopeng', '123456as');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `app_blog_post`
+--
+
+CREATE TABLE IF NOT EXISTS `app_blog_post` (
+  `id` int(11) NOT NULL auto_increment,
+  `postid` int(11) default NULL,
+  `blogid` int(11) default NULL,
+  `title` varchar(100) default NULL,
+  `post_status` varchar(100) default NULL,
+  `description` varchar(2000) default NULL,
+  `categories` varchar(200) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `app_blog_post`
+--
+
 
 -- --------------------------------------------------------
 
@@ -59,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `note` (
 --
 
 INSERT INTO `note` (`id`, `userid`, `title`, `content`, `status`, `create_time`) VALUES
-(1, 0, '多发生的风', '11', 0, '2013-05-05 09:44:57');
+(1, 0, '多发生的风', '11多发生的风多发生的风多发生的风多发生的风多发生的风多发生的风', 0, '2013-05-05 09:44:57');
 
 -- --------------------------------------------------------
 
