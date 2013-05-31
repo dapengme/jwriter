@@ -2,6 +2,8 @@ package com.beardnote.jwriter.web.user;
 
 import javax.servlet.http.HttpServletRequest;
 
+import jodd.util.StringUtil;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,8 +16,13 @@ import com.beardnote.jwriter.model.User;
 public class LoginController extends BaseController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login() {
-        return "login";
+    public String login(HttpServletRequest request, String goto_page) {
+        if (StringUtil.isNotBlank(goto_page)) {
+            return r("/");
+        } else {
+            return "login";
+        }
+
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)

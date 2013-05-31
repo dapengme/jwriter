@@ -2,19 +2,21 @@
 
 $(document).ready(function() {
 	
+	
 	"use strict";
 	
 	// init dropzone
-	$(".dropzone-box").dropzone({ url: "ajax/file.php" });
-	
-	// init file tree
-	$(document).ready( function() {
-		$('#file_tree_box').fileTree({ 
-			root: '/var/www/default/dev/theme.bootstrap/',
-			script: 'ajax/jquery.file.tree.php'
-		}, function(file) {
-			alert(file);
-		});
+	var myDropzone=  $(".dropzone-box").dropzone({ 
+		url: "/upload"
 	});
 	
+	
+	myDropzone.on("success", function() {
+        jQuery('.success-mark').show();
+        jQuery('.error-mark').hide();
+	});
+	myDropzone.on("error", function() {
+        jQuery('.success-mark').hide();
+        jQuery('.error-mark').show();
+	});
 });

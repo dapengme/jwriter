@@ -12,6 +12,23 @@
         http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
+
+
+
+	<!-- Scans the classpath of the application for @Components to deploy as 
+		beans -->
+	<context:component-scan base-package="com.beardnote.jwriter.web" />
+
+	<!-- Configures the @Controller programming model -->
+	<mvc:annotation-driven />
+
+	<!-- Forwards requests to the "/" resource to the "home" view -->
+	<mvc:view-controller path="/" view-name="index" />
+
+	<!-- 处理静态资源 -->
+	<mvc:default-servlet-handler />
+
+
 	<!-- 解决@ResponseBody中文乱码 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
@@ -39,18 +56,6 @@
 		</property>
 	</bean>
 
-	<!-- Scans the classpath of the application for @Components to deploy as 
-		beans -->
-	<context:component-scan base-package="com.beardnote.jwriter.web" />
-
-	<!-- Configures the @Controller programming model -->
-	<mvc:annotation-driven />
-
-	<!-- Forwards requests to the "/" resource to the "home" view -->
-	<mvc:view-controller path="/" view-name="index" />
-
-	<!-- 处理静态资源 -->
-	<mvc:default-servlet-handler />
 
 	<!-- i18n message source -->
 	<bean id="messageSource"
@@ -60,16 +65,15 @@
 		<property name="cacheSeconds" value="30" />
 	</bean>
 
-	<!-- 
-	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/views/" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-	-->
 
+	<bean id="multipartResolver" class="net.sourceforge.fastupload.springmvc.FastuploadResolver">
+		<property name="encoding" value="utf-8" />
+		<property name="tempRepository" value="d:/" />
+		<property name="useTempRepository" value="false" />
+		<property name="threshold" value="2000000" />
+		<property name="maxContentLength" value="2000000" />
+		<property name="allowedExtensions" value=".jpg, .png, .zip" />
+	</bean>
 
 	<bean id="beetlConfig" class="org.bee.tl.ext.spring.BeetlGroupUtilConfiguration"
 		init-method="init">
